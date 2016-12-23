@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta name="keywords" content="音乐,QQ音乐,在线听歌,音乐下载,音乐播放器,音乐网站,MV,巅峰榜,音乐排行榜,翻译歌曲,热门歌曲,经典老歌">
+    <meta name="description" content="QQ音乐是腾讯公司推出的一款免费音乐服务，海量音乐在线试听、最流行音乐在线首发、歌词翻译、手机铃声下载、高品质音乐试听、正版音乐下载、免费空间背景音乐设置、MV观看等，是互联网音乐播放和下载的首选">
+    <title>QQ音乐 - 中国最新最全免费正版高品质音乐平台！</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+<body>
+	<!-- qq.music 头部 -->
+	<header class="mu-head">
+		<i class="mu-logo"></i>
+		<a href="#" class="app-download">下载APP</a>
+	</header>
+
+	<!-- qq.music 导航-->
+	<nav class="mu-nav">
+		<ul class="clearfix">
+			<li class="current"> <p>推荐</p> </li>
+			<li class="ranking"> <p>排行榜</p> </li>
+			<li> <p>搜索</p> </li>
+		</ul>
+	</nav>
+
+	<!-- 轮播图 -->
+	<section class="mu-banner swiper-container">
+		<ul class="swiper-wrapper clearfix">
+			<li class="swiper-slide">
+				<a href="#"><img src="images/banner1.jpg" alt=""></a>
+			</li>
+				<li class="swiper-slide">
+				<a href="#"><img src="images/banner2.jpg" alt=""></a>
+			</li>
+			<li class="swiper-slide">
+				<a href="#"><img src="images/banner3.jpg" alt=""></a>
+			</li>
+			<li class="swiper-slide">
+				<a href="#"><img src="images/banner4.jpg" alt=""></a>
+			</li>
+		</ul>
+		<ul class="swiper-pagination"></ul>
+	</section>
+
+	<!-- 主体内容 -->
+	<article>
+		<!-- 电台 -->
+		<section class="radio clearfix">
+			<h2 class="art-head">电台</h2>
+		</section>
+		<!-- 热门歌单 -->
+		<section id="wrapper" class="hotSongs clearfix">
+			<h2 class="art-head">热门歌单</h2>
+			<div id="box"></div>
+		</section>
+	</article>
+	<footer>
+		<!-- <p>上拉加载更多</p> -->
+		<div class="load" display='none'>
+			<div class="load-item">
+				<i class="animation"></i>
+				<i class="animation"></i>加
+				<i class="animation"></i>载
+				<i class="animation"></i>中
+				<i class="animation"></i>…
+				<i class="animation"></i>
+				<i class="animation"></i>
+			</div>
+		</div>
+		<div class="loaded">
+			上拉加载更多
+		</div>
+	</footer>
+	<!-- 前台模板 -->
+	<script type="text/template" id="template">
+		<% for(var i = 0 ; i < items.length; i++) { %>
+			<figure>
+					<img src="<%= items[i].path%>" alt="">
+					<figcaption>
+						<p><%= items[i].desc%></p>
+					</figcaption>
+				</figure>
+		<% } %>		
+	</script>
+	<script type="text/template" id="songs">
+		<% for(var i = 0 ; i < songs.length; i++) { %>
+			<figure>
+					<img src="<%= songs[i].path%>" alt="">
+					<figcaption>
+						<span><i></i><%= songs[i].times%></span>
+						<p><%= songs[i].desc%></p>
+						<em><%= songs[i].author%></em>
+					</figcaption>
+				</figure>
+		<% } %>		
+	</script>
+	
+	<script src='js/template-native.js'></script>
+	<script src='js/swiper.min.js'></script>
+	<script src='js/zepto.js'></script>
+	<script src='js/touch.js'></script>
+	<script src='js/event.js'></script>
+	<script src='js/fx.js'></script>
+	<script src='js/jquery-3.1.1.js'></script>
+	<script src='js/index.js'></script>
+</body>
+</html>

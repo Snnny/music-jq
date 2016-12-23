@@ -1,0 +1,153 @@
+*,::before,::after{
+	box-sizing: border-box;
+	/*取消点击高亮*/
+	-webkit-tap-highlight-color:transparent;
+	font-family: "微软雅黑", sans-serif
+}
+input{
+	/*手机端清除高亮*/
+	-webkit-appearance: none;
+}
+
+@q_green:#31c27c;
+@width: 100%;
+@border: 1px solid #ccc;
+.pos(a){
+	position: absolute;
+}
+.pos(r){
+	position: relative;
+}
+.pos(f){
+	position: fixed;
+}
+.f(l){
+	float: left;
+}
+.f(r){
+	float: right;
+}
+body{
+	width: @width;
+	background-color: #f4f4f4;
+	font: 12px/1.5 "hiragino sans gb",arial;
+	font-weight: normal;
+}
+
+
+/*头部*/
+header.mu-head{
+	width: @width;
+	height: 44px;
+	background-color: @q_green;
+	padding: 0 10px;
+	i.mu-logo{
+		.f(l);
+		height: 100%;
+		width: 100px;
+		background:url(../images/logo.png) center no-repeat;
+		background-size: 100%;
+	}
+	.app-download{
+		.f(r);
+		height: 24px;
+		margin-top: 10px;
+		line-height: 18px;
+		font-size: 14px;
+		border-radius: 44px;
+		padding: 3px 5px;
+		background-color: rgba(0,0,0,.2);
+	}
+}
+
+/*顶部导航*/
+.mu-nav{
+	width: @width;
+	ul{
+		li{
+			.f(l);
+			width: @width / 3;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			p{
+				font-size: 16px;
+			}
+			
+			&.current{
+				border-bottom: 2px solid @q_green;
+				p{
+					color: @q_green;
+				}
+			}
+		}
+	}
+}
+
+/*主体内容*/
+article{
+	width: 95%;
+	margin: 10px auto;
+	min-height: 400px;
+	.ranking-list{
+		li{
+			width: @width;
+			margin-bottom: 10px;
+			height: 100px;
+			background: #fff;
+			display: flex;
+			a{
+				.pos(r);
+				flex: 1;
+				height: 100%;
+				img{
+					height: 100%;
+				}
+				span{
+					.pos(a);
+					left: 15px;
+					bottom: 10px;
+					width: 75px;
+					height: 10px;
+					color: #CAA;
+					line-height: 10px;
+					font-size: 10px;
+					i{
+						.pos(a);
+						height: 100%;
+						width: 15px;
+						left: -10px;
+						bottom: 0;
+						background-image: url(../images/list_sprite.png);
+						background-repeat: no-repeat;
+		    			background-size: 24px 60px;
+		    			background-position: 0 -50px;
+					}
+				}
+			}
+			.ranking-content{
+				flex: 2;
+				padding:10px 28px;
+				overflow: hidden;
+				h3{
+					font-size: 16px;
+					font-weight: 400;
+					margin-bottom: 10px;
+					text-overflow:ellipsis;
+					white-space:nowrap;	
+					overflow:hidden;
+				}
+				p{
+					font-size: 12px;
+					color: rgba(0,0,0,.5);
+					line-height: 1.2;
+					//超出部分用引号代替
+					text-overflow:ellipsis;
+					white-space:nowrap;	
+					overflow:hidden;
+				}
+			}
+			
+		}
+	}
+}

@@ -1,0 +1,80 @@
+/* 
+*css样式重置
+*
+*/
+body,
+div,
+ul,
+li,
+img,
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+table,
+tr,
+td,
+th,
+dd,
+dt,
+dl,
+textarea,
+form,
+input,
+figure,
+figcaption,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑", "宋体", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+ul,
+ol {
+  list-style: none;
+}
+/*清除浮动*/
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: none;
+}
+img {
+  vertical-align: middle;
+}
+input[type="submit"] {
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
+p {
+  word-wrap: break-word;
+}
+s,
+i,
+em {
+  font-style: normal;
+  text-decoration: none;
+}

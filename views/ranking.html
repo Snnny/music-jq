@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta name="keywords" content="音乐,QQ音乐,在线听歌,音乐下载,音乐播放器,音乐网站,MV,巅峰榜,音乐排行榜,翻译歌曲,热门歌曲,经典老歌">
+    <meta name="description" content="QQ音乐是腾讯公司推出的一款免费音乐服务，海量音乐在线试听、最流行音乐在线首发、歌词翻译、手机铃声下载、高品质音乐试听、正版音乐下载、免费空间背景音乐设置、MV观看等，是互联网音乐播放和下载的首选">
+    <title>排行榜 - 中国最新最全免费正版高品质音乐平台！</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/ranking.css">
+</head>
+<body>
+		<!-- qq.music 头部 -->
+		<header class="mu-head">
+			<i class="mu-logo"></i>
+			<a href="#" class="app-download">下载APP</a>
+		</header>
+
+		<!-- qq.music 导航-->
+		<nav class="mu-nav">
+			<ul class="clearfix">
+				<li class="index"> <p>推荐</p> </li>
+				<li class="current"> <p>排行榜</p> </li>
+				<li> <p>搜索</p> </li>
+			</ul>
+		</nav>
+
+		<!-- 主体内容 -->
+		<article>
+				<ul class="ranking-list clearfix">
+				</ul>
+		</article>
+		
+		<!-- 模板 -->
+		<script type="text/template" id="template">
+			<% for(var i = 0 ; i < items.length ; i++ ) {%>
+				<li class="ranking-item">
+					<a href="#">
+						<img src="../<%= items[i].url%>" alt="<%= items[i].alt%>">
+						<span><i></i><%= items[i].times%></span>
+					</a>
+					<div class="ranking-content">
+						<h3><%= items[i].title%></h3>
+						<p> 1 <span><%= items[i].list[0].name%></span>- <%= items[i].list[0].author%></p>
+						<p> 2 <span><%= items[i].list[1].name%></span>- <%= items[i].list[1].author%></p>
+						<p> 3 <span><%= items[i].list[2].name%></span>- <%= items[i].list[2].author%></p>
+					</div>
+				</li>
+			<% } %>	
+		</script>
+
+		<script src='../js/zepto.js'></script>
+		<script src='../js/touch.js'></script>
+		<script src='../js/event.js'></script>
+		<script src='../js/template-native.js'></script>
+		<script src='../js/ranking.js'></script>
+</body>
+</html>

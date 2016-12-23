@@ -1,0 +1,21 @@
+@keyframes loading {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.animation {
+  animation: loading 2s ease-in-out 0s infinite;
+  animation: loading 2s ease-in-out 1s infinite;
+}
+.animation {
+  animation: loading 2s ease-in-out 0s infinite;
+}
+.animation {
+  animation: loading 2s ease-in-out 1s infinite;
+}

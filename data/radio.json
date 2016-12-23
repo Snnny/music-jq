@@ -1,0 +1,23 @@
+[
+	{
+		"path":"images/content1.jpg",
+		"desc":"热歌"
+	},{
+		"path":"images/content2.jpg",
+		"desc":"一人一首招牌歌"
+	},{
+		"path":"images/content3.jpg",
+		"desc":"记忆深处的那首歌"
+	},{
+		"path":"images/content4.jpg",
+		"desc":"奈何情深缘浅"
+	}
+	,{
+		"path":"images/content5.jpg",
+		"desc":"曾经年少轻狂，岁月静好"
+	}
+	,{
+		"path":"images/content6.jpg",
+		"desc":"一个人的狂欢"
+	}
+]
